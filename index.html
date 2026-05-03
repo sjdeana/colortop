@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ColorTop — Selección curada de los mejores productos negros. Elegancia, diseño y estilo de vida en cada recomendación.">
+<meta name="keywords" content="productos negros, top 10, Amazon afiliados, estilo minimalista, diseño negro, lifestyle premium">
+<title>ColorTop — Lo mejor en negro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --black:     #0d0d0d;
+    --charcoal:  #1a1a1a;
+    --graphite:  #2e2e2e;
+    --smoke:     #555555;
+    --mid:       #888888;
+    --silver:    #b0b0b0;
+    --pearl:     #e2e2e2;
+    --light-bg:  #f4f3f0;
+    --white:     #ffffff;
+    --sans: 'DM Sans', 'Inter', system-ui, sans-serif;
+    --transition: 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  html { scroll-behavior: smooth; font-size: 16px; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--white);
+    color: var(--black);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    overflow-x: hidden;
+  }
+
+  /* ── HEADER ── */
+  header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.1rem 2.5rem;
+    transition: background var(--transition), padding var(--transition);
+  }
+
+  header.scrolled {
+    background: rgba(13,13,13,0.96);
+    padding: 0.85rem 2.5rem;
+    backdrop-filter: blur(14px);
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    text-decoration: none;
+  }
+
+  .logo-mark {
+    width: 26px; height: 26px;
+    background: var(--white);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .logo-mark span {
+    display: block;
+    width: 12px; height: 12px;
+    background: var(--black);
+    border-radius: 50%;
+  }
+
+  .logo-text {
+    font-family: var(--sans);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--white);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+
+  nav { display: flex; align-items: center; gap: 2rem; }
+
+  nav a {
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    transition: color var(--transition);
+  }
+
+  nav a:hover { color: var(--white); }
+
+  .nav-cta {
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    color: var(--white) !important;
+    font-size: 0.78rem;
+    font-weight: 500;
+    transition: background var(--transition) !important;
+  }
+
+  .nav-cta:hover { background: rgba(255,255,255,0.12); }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 22px; height: 1.5px;
+    background: var(--white);
+  }
+
+  /* ── HERO ── */
+  .hero {
+    height: 100vh;
+    min-height: 580px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    background: var(--black);
+  }
+
+  .hero-bg {
+    position: absolute; inset: 0;
+    background: linear-gradient(120deg, #0d0d0d 0%, #1c1c1c 50%, #111 100%);
+  }
+
+  /* Simulated dark desk photo texture */
+  .hero-texture {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 70% 60%, rgba(255,255,255,0.04) 0%, transparent 55%),
+      radial-gradient(ellipse at 85% 20%, rgba(255,255,255,0.03) 0%, transparent 40%);
+  }
+
+  .hero-noise {
+    position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.07'/%3E%3C/svg%3E");
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  .hero-content {
+    position: relative; z-index: 2;
+    padding: 0 2.5rem 5rem;
+    max-width: 620px;
+    animation: fadeUp 1s ease both;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(28px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero h1 {
+    font-size: clamp(2.2rem, 5.5vw, 4rem);
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1.12;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.1rem;
+    animation: fadeUp 1s 0.1s ease both;
+  }
+
+  .hero-sub {
+    font-size: clamp(0.9rem, 1.8vw, 1rem);
+    color: var(--silver);
+    max-width: 440px;
+    line-height: 1.75;
+    font-weight: 300;
+    animation: fadeUp 1s 0.25s ease both;
+  }
+
+  .hero-scroll {
+    position: absolute;
+    bottom: 2rem; left: 50%;
+    transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center;
+    gap: 0.4rem;
+    color: var(--smoke);
+    font-size: 0.58rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    animation: fadeUp 1s 0.5s ease both;
+  }
+
+  .scroll-line {
+    width: 1px; height: 36px;
+    background: linear-gradient(to bottom, var(--smoke), transparent);
+    animation: scrollPulse 2s ease infinite;
+  }
+
+  @keyframes scrollPulse {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.9; }
+  }
+
+  /* ── SECTIONS ── */
+  section { padding: 5.5rem 2.5rem; }
+  .container { max-width: 1160px; margin: 0 auto; }
+
+  .section-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--mid);
+    display: block;
+    margin-bottom: 0.9rem;
+    font-weight: 500;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .section-header h2 {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 600;
+    color: var(--black);
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+  }
+
+  .see-all {
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--smoke);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    transition: color var(--transition);
+    white-space: nowrap;
+  }
+
+  .see-all:hover { color: var(--black); }
+
+  /* ── CATEGORÍAS ── */
+  .categories { background: var(--white); }
+
+  .cat-block { margin-bottom: 4.5rem; }
+  .cat-block:last-child { margin-bottom: 0; }
+
+  .cat-block-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.9rem;
+    border-bottom: 1px solid var(--pearl);
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .cat-block-title { display: flex; align-items: baseline; gap: 0.75rem; }
+
+  .cat-block-num {
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: var(--mid);
+    letter-spacing: 0.1em;
+  }
+
+  .cat-block-header h3 {
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    font-weight: 600;
+    color: var(--black);
+    letter-spacing: -0.02em;
+  }
+
+  .prod-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.1rem;
+  }
+
+  /* ── PRODUCT CARDS ── */
+  .prod-card {
+    background: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--pearl);
+    transition: transform var(--transition), box-shadow var(--transition);
+  }
+
+  .prod-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.09);
+  }
+
+  .prod-img {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background: #f0efec;
+  }
+
+  .prod-img-dark { background: #1a1a1a; }
+  .prod-img-mid  { background: #2a2a2a; }
+  .prod-img-soft { background: #ebebeb; }
+
+  .prod-img-placeholder {
+    font-size: 3rem;
+    filter: grayscale(1);
+    opacity: 0.5;
+  }
+
+  .prod-badge {
+    position: absolute;
+    top: 0.65rem; left: 0.65rem;
+    background: var(--black);
+    color: var(--white);
+    font-size: 0.56rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.18rem 0.5rem;
+    border-radius: 3px;
+  }
+
+  .prod-body { padding: 0.85rem 1rem 1.1rem; }
+
+  .prod-cat {
+    font-size: 0.62rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--mid);
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+
+  .prod-body h4 {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--black);
+    line-height: 1.35;
+    margin-bottom: 0.35rem;
+    letter-spacing: -0.01em;
+  }
+
+  .prod-body p {
+    font-size: 0.76rem;
+    color: var(--smoke);
+    line-height: 1.6;
+    font-weight: 300;
+    margin-bottom: 0.75rem;
+  }
+
+  .stars { display: flex; align-items: center; gap: 0.35rem; margin-bottom: 0.75rem; }
+  .star-row { display: flex; gap: 2px; }
+
+  .star {
+    width: 10px; height: 10px;
+    display: inline-block;
+    background: var(--black);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  }
+
+  .star.empty { background: var(--pearl); }
+  .star-count { font-size: 0.67rem; color: var(--mid); font-weight: 400; }
+
+  .btn-amazon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    background: var(--black);
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    padding: 0.6rem 0.75rem;
+    border-radius: 5px;
+    transition: background var(--transition);
+  }
+
+  .btn-amazon:hover { background: var(--graphite); }
+
+  /* ── TOPS ── */
+  .tops { background: var(--black); padding: 5.5rem 2.5rem; }
+  .tops .section-label { color: var(--mid); }
+  .tops .section-header h2 { color: var(--white); }
+  .tops .see-all { color: var(--smoke); }
+  .tops .see-all:hover { color: var(--silver); }
+
+  .tops-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--graphite);
+  }
+
+  .top-card {
+    background: var(--charcoal);
+    padding: 2.25rem;
+    text-decoration: none;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    transition: background var(--transition);
+  }
+
+  .top-card::after {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 2px;
+    background: var(--white);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.4s ease;
+  }
+
+  .top-card:hover { background: #222; }
+  .top-card:hover::after { transform: scaleY(1); }
+
+  .top-number {
+    font-size: 3rem;
+    font-weight: 300;
+    color: rgba(255,255,255,0.05);
+    line-height: 1;
+    margin-bottom: 0.7rem;
+    letter-spacing: -0.04em;
+  }
+
+  .top-label {
+    font-size: 0.62rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--mid);
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .top-card h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1.3;
+    margin-bottom: 0.7rem;
+    letter-spacing: -0.02em;
+  }
+
+  .top-card p {
+    font-size: 0.8rem;
+    color: var(--smoke);
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  .top-arrow {
+    position: absolute;
+    bottom: 1.75rem; right: 1.75rem;
+    width: 30px; height: 30px;
+    border: 1px solid var(--graphite);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--smoke);
+    font-size: 0.85rem;
+    transition: border-color var(--transition), color var(--transition), transform 0.3s;
+  }
+
+  .top-card:hover .top-arrow {
+    border-color: var(--silver);
+    color: var(--white);
+    transform: rotate(45deg);
+  }
+
+  /* ── EDITOR PICKS ── */
+  .editor-picks { background: var(--light-bg); }
+
+  .editor-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  /* ── MANIFESTO ── */
+  .manifesto {
+    background: var(--black);
+    text-align: center;
+    padding: 6rem 2.5rem;
+  }
+
+  .manifesto .container { max-width: 640px; }
+
+  .divider {
+    width: 36px; height: 1px;
+    background: var(--smoke);
+    margin: 1.75rem auto;
+  }
+
+  .manifesto p {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    line-height: 1.9;
+    color: var(--silver);
+    font-weight: 300;
+    max-width: 560px;
+    margin: 0 auto;
+    letter-spacing: -0.01em;
+  }
+
+  .manifesto p em {
+    font-style: normal;
+    color: var(--white);
+    font-weight: 400;
+  }
+
+  /* ── AFILIADOS ── */
+  .affiliate-notice {
+    background: var(--white);
+    padding: 1.75rem 2.5rem;
+    border-top: 1px solid var(--pearl);
+    border-bottom: 1px solid var(--pearl);
+  }
+
+  .affiliate-inner {
+    max-width: 760px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+  }
+
+  .affiliate-icon {
+    width: 18px; height: 18px;
+    background: var(--pearl);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+    font-size: 0.65rem;
+    color: var(--smoke);
+    font-weight: 600;
+  }
+
+  .affiliate-notice p {
+    font-size: 0.75rem;
+    color: var(--mid);
+    line-height: 1.8;
+    font-weight: 300;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--black);
+    padding: 2.25rem 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid var(--graphite);
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 1024px) {
+    .prod-grid-4 { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 900px) {
+    header { padding: 1rem 1.5rem; }
+    header.scrolled { padding: 0.8rem 1.5rem; }
+    nav { display: none; }
+    nav.open {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      inset: 0;
+      background: rgba(13,13,13,0.98);
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      z-index: 200;
+    }
+    nav.open a { font-size: 1.1rem; }
+    .hamburger { display: flex; z-index: 300; }
+    section { padding: 4rem 1.5rem; }
+    .tops-grid { grid-template-columns: 1fr; gap: 1px; }
+    .editor-grid { grid-template-columns: repeat(2, 1fr); }
+    .hero-content { padding: 0 1.5rem 4.5rem; }
+  }
+
+  @media (max-width: 600px) {
+    section { padding: 3rem 1.25rem; }
+    .prod-grid-4 { grid-template-columns: 1fr; }
+    .editor-grid { grid-template-columns: 1fr; }
+    .top-card { padding: 1.5rem; }
+    .cat-block-header { flex-direction: column; align-items: flex-start; }
+    .hero-content { padding: 0 1.25rem 4rem; }
+  }
+
+  /* ── FADE IN ── */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+  }
+
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+  .fade-in:nth-child(2) { transition-delay: 0.08s; }
+  .fade-in:nth-child(3) { transition-delay: 0.16s; }
+  .fade-in:nth-child(4) { transition-delay: 0.24s; }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="header">
+  <a href="#" class="logo" aria-label="ColorTop">
+    <div class="logo-mark"><span></span></div>
+    <span class="logo-text">ColorTop</span>
+  </a>
+  <nav id="nav">
+    <a href="#categorias">Categorías</a>
+    <a href="#tops">Los Tops</a>
+    <a href="#editor">Selección</a>
+    <a href="#categorias" class="nav-cta">Explorar</a>
+  </nav>
+  <button class="hamburger" id="hamburger" aria-label="Menú" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- HERO -->
+<section class="hero" role="banner">
+  <div class="hero-bg"></div>
+  <div class="hero-texture"></div>
+  <div class="hero-noise"></div>
+  <div class="hero-content">
+    <h1>Descubre los mejores productos negros</h1>
+    <p class="hero-sub">
+      Top de productos negros elegantes y seleccionados en Amazon,
+      cuidadosamente elegidos para elevar tu estilo.
+    </p>
+  </div>
+  <div class="hero-scroll" aria-hidden="true">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- CATEGORÍAS CON PRODUCTOS -->
+<section class="categories" id="categorias" aria-label="Categorías de productos">
+  <div class="container">
+
+    <div class="section-header">
+      <div>
+        <span class="section-label">Explora por categoría</span>
+        <h2>Productos negros por universo</h2>
+      </div>
+    </div>
+
+    <!-- 01: Oficina y Escritorio -->
+    <div class="cat-block">
+      <div class="cat-block-header">
+        <div class="cat-block-title">
+          <span class="cat-block-num">01</span>
+          <h3>Oficina &amp; Escritorio</h3>
+        </div>
+        <a href="#" class="see-all">Ver top completo →</a>
+      </div>
+      <div class="prod-grid-4">
+
+        <article class="prod-card fade-in">
+          <div class="prod-img prod-img-dark">
+            <span class="prod-img-placeholder" aria-hidden="true">🖥️</span>
+            <span class="prod-badge">Más valorado</span>
+          </div>
+          <div class="prod-body">
+            <span class="prod-cat">Escritorio</span>
+            <h4>Monitor Ultra-Slim 27"</h4>
+            <p>Pantalla IPS sin marcos con soporte ergonómico. Diseño invisible, rendimiento superior.</p>
+            <div class="stars" aria-label="4.8 de 5 estrellas">
+              <div class="star-row" aria-hidden="true"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span></div>
+              <span class="star-count">4.8 (324)</span>
+            </div>
+            <a href="https://www.amazon.com" <!-- reemplazar link --> target="_blank" rel="noopener noreferrer sponsored" class="btn-amazon">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192L7.678 16.468l-.405 4.728c.59 0 .852-.255 1.18-.57l2.83-2.734 5.885 4.343c1.084.594 1.866.29 2.133-1.005l3.862-18.171c.392-1.578-.561-2.295-1.498-1.342z"/></svg>
+              Ver en Amazon
+            </a>
+          </div>
+        </article>
+
+        <article class="prod-card fade-in">
+          <div class="prod-img prod-img-dark">
+            <img src="imagenes/Teclado mecánico inalámbrico ultra delgado.png" alt="Keychron K5 Max" style="width:75%;height:75%;object-fit:contain;">
+          </div>
+          <div class="prod-body">
+          <span class="prod-cat">Tecnología</span>
+          <h4>Keychron K5 Max</h4>
+          <p>Teclado mecánico inalámbrico</p>
+          <div class="stars" aria-label="5 de 5 estrellas">
+            <div class="star-row" aria-hidden="true"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span></div>
+            <span class="star-count">5.0 (0)</span>
+          </div>
+          <a href="www.teclado.com" target="_blank" rel="noopener noreferrer sponsored" class="btn-amazon">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192L7.678 16.468l-.405 4.728c.59 0 .852-.255 1.18-.57l2.83-2.734 5.885 4.343c1.084.594 1.866.29 2.133-1.005l3.862-18.171c.392-1.578-.561-2.295-1.498-1.342z"/></svg>
+            Ver en Amazon
+          </a>
+        </div>
+        </article>
+
+        <article class="prod-card fade-in">
+          <div class="prod-img prod-img-dark">
+            <span class="prod-img-placeholder" aria-hidden="true">🖱️</span>
+          </div>
+          <div class="prod-body">
+            <span class="prod-cat">Escritorio</span>
+            <h4>Mouse Ergonómico Negro Mate</h4>
+            <p>Diseño silencioso con superficie texturada antideslizante. 90 días de batería.</p>
+            <div class="stars" aria-label="4.5 de 5 estrellas">
+              <div class="star-row" aria-hidden="true"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star empty"></span></div>
+              <span class="star-count">4.5 (211)</span>
+            </div>
+            <a href="https://www.amazon.com" <!-- reemplazar link --> target="_blank" rel="noopener noreferrer sponsored" class="btn-amazon">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192L7.678 16.468l-.405 4.728c.59 0 .852-.255 1.18-.57l2.83-2.734 5.885 4.343c1.084.594 1.866.29 2.133-1.005l3.862-18.171c.392-1.578-.561-2.295-1.498-1.342z"/></svg>
+              Ver en Amazon
+            </a>
+          </div>
+        </article>
+
+        <article class="prod-card fade-in">
+          <div class="prod-img prod-img-dark">
+            <span class="prod-img-placeholder" aria-hidden="true">💡</span>
+          </div>
+          <div class="prod-body">
+            <span class="prod-cat">Escritorio</span>
+            <h4>Lámpara LED de Escritorio</h4>
+            <p>Brazo articulado en aluminio negro. Luz cálida y fría regulable al tacto.</p>
+            <div class="stars" aria-label="4.7 de 5 estrellas">
+              <div class="star-row" aria-hidden="true"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span></div>
+              <span class="star-count">4.7 (156)</span>
+            </div>
+            <a href="https://www.amazon.com" <!-- reemplazar link --> target="_blank" rel="noopener noreferrer sponsored" class="btn-amazon">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192L7.678 16.468l-.405 4.728c.59 0 .852-.255 1.18-.57l2.83-2.734 5.885 4.343c1.084.594 1.866.29 2.133-1.005l3.862-18.171c.392-1.578-.561-2.295-1.498-1.342z"/></svg>
+              Ver en Amazon
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+    <!-- 02: Tecnología -->
+    <div class="cat-block">
+      <div class="cat-block-header">
+        <div class="cat-block-title">
+          <span class="cat-block-num">02</span>
+          <h3>Tecnología</h3>
+        </div>
+        <a href="#" class="see-all">Ver top completo →</a>
+      </div>
+      <div class="prod-grid-4">
+
+        <article class="prod-card fade-in">
+          <div class="prod-img prod-img-mid">
+            <span class="prod-img-placeholder" aria-hidden="true">🎧</span>
+            <span class="prod-badge">Más valorado</span>
+          </div>
+          <div class="prod-body">
+            <span class="prod-cat">Tecnología</span>
+            <h4>Auriculares Over-Ear Negros</h4>
+            <p>Cancelación activa de ruido y 30h de batería. Acabado mate de referencia.</p>
+            <div class="stars" aria-label="4.9 de 5 estrellas">
+              <div class="star-row" aria-hidden="true"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span></div>
+              <span class="star-count">4.9 (512)</span>
+            </div>
+            <a href="https://www.amazon.com" <!-- reemplazar link --> target="_blank" rel="noopener noreferrer sponsored" class="btn-amazon">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192L7.678 16.468l-.405 4.728c.59 0 .852-.255 1.18-.57l2.83-2.734 5.885 4.343c1.084.594 1.866.29 2.133-1.005l3.862-18.171c.392-1.578-.561-2.295-1.498-1.342z"/></svg>
+              Ver en Amazon
+            </a>
+          </div>
+        </article>
+
+        <article class="prod-card fade-in">
+          <div class="prod-img prod-img-mid">
+            <span class="prod-img-placeholder" aria-hidden="true">📱</span>
+          </div>
+          <div class="prod-body">
+            <span class="prod-cat">Tecnología</span>
+            <h4>Cargador Inalámbrico Negro</h4>
+            <p>15W de carga rápida. Superficie de tejido negro premium antipolvo.</p>
+            <div class="stars" aria-label="4.6 de 5 estrellas">
+              <div class="star-row" aria-hidden="true"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star empty"></span></div>
+              <span class="star-count">4.6 (298)</span>
+            </div>
+            <a href="https://www.amazon.com" <!-- reemplazar link --> target="_blank" rel="noopener noreferrer sponsored" class="btn-amazon">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192L7.678 16.468l-.405 4.728c.59 0 .852-.255 1.18-.57l2.83-2.734 5.885 4.343c1.084.594 1.866.29 2.133-1.005l3.862-18.171c.392-1.578-.561-2.295-1.498-1.342z"/></svg>
+              Ver en Amazon
+            </a>
+          </div>
+        </article>
+
+        <article class="prod-card fade-in">
+          <div class="prod-img prod-img-mid">
+            <span class="prod-img-placeholder" aria-hidden="true">📷</span>
+            <span class="prod-badge">Top editorial</span>
+          </div>
+          <div class="prod-body">
+            <span class="prod-cat">Tecnología</span>
+            <h4>Cámara Web 4K Ultra HD</h4>
+            <p>Enfoque automático, corrección de luz y carcasa negra de alta densidad.</p>
+            <div class="stars" aria-label="4.7 de 5 estrellas">
+              <div class="star-row" aria-hidden="true"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span></div>
+              <span class="star-count">4.7 (143)</span>
+            </div>
+            <a href="https://www.amazon.com" <!-- reemplazar link --> target="_blank" rel="noopener noreferrer sponsored" class="btn-amazon">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192L7.678 16.468l-.405 4.728c.59 0 .852-.255 1.18-.57l2.83-2.734 5.885 4.343c1.084.594 1.866.29 2.133-1.005l3.862-18.171c.392-1.578-.561-2.295-1.498-1.342z"/></svg>
+              Ver en Amazon
+            </a>
+          </div>
+        </article>
+
+        <article class="prod-card fade-in">
+          <div class="prod-img prod-img-mid">
+            <span class="prod-img-placeholder" aria-hidden="true">🔋</span>
+          </div>
+          <div class="prod-body">
+            <span class="prod-cat">Tecnología</span>
+            <h4>Batería Portátil 20.000mAh</h4>
+            <p>Aluminio anodizado negro. Carga simultánea para 3 dispositivos.</p>
+            <div class="stars" aria-label="4.5 de 5 estrellas">
+              <div class="star-row" aria-hidden="true"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star empty"></span></div>
+              <span class="star-count">4.5 (389)</span>
+            </div>
+            <a href="https://www.amazon.com" <!-- reemplazar link --> target="_blank" rel="noopener noreferrer sponsored" class="btn-amazon">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192L7.678 16.468l-.405 4.728c.59 0 .852-.255 1.18-.57l2.83-2.734 5.885 4.343c1.084.594 1.866.29 2.133-1.005l3.862-18.171c.392-1.578-.561-2.295-1.498-1.342z"/></svg>
+              Ver en Amazon
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+    <!-- 03: Hogar y Cocina -->
+    <div class="cat-block">
+      <div class="cat-block-header">
+        <div class="cat-block-title">
+          <span class="cat-block-num">03</span>
+          <h3>Hogar &amp; Cocina</h3>
+        </div>
+        <a href="#" class="see-all">Ver top completo →</a>
+      </div>
+      <div class="prod-grid-4">
+
+        <article class="prod-card fade-in">
+          <div class="prod-img prod-img-dark">
+            <span class="prod-img-placeholder" aria-hidden="true">☕</span>
+            <span class="prod-badge">Edición limitada</span>
+          </div>
+          <div class="prod-body">
+            <span class="prod-cat">Cocina</span>
+            <h4>Cafetera Espresso Negra Mate</h4>
+            <p>Acabado cerámico negro absorbente de luz. El ritual del café como objeto de colección.</p>
+            <div class="stars" aria-label="4.9 de 5 estrellas">
+              <div class="star-row" aria-hidden="true"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span></div>
+              <span class="star-count">4.9 (97)</span>
+            </div>
+            <a href="https://www.amazon.com" <!-- reemplazar link --> target="_blank" rel="noopener noreferrer sponsored" class="btn-amazon">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192L7.678 16.468l-.405 4.728c.59 0 .852-.255 1.18-.57l2.83-2.734 5.885 4.343c1.084.594 1.866.29 2.133-1.005l3.862-18.171c.392-1.578-.561-2.295-1.498-1.342z"/></svg>
+              Ver en Amazon
+            </a>
+          </div>
+        </article>
+
+        <article class="prod-card fade-in">
+          <div class="prod-img prod-img-dark">
+            <span class="prod-img-placeholder" aria-hidden="true">🍳</span>
+          </div>
+          <div class="prod-body">
+            <span class="prod-cat">Cocina</span>
+            <h4>Sartén de Hierro Fundido</h4>
+            <p>Negro natural por definición. Sin recubrimiento químico. Para toda la vida.</p>
+            <div class="stars" aria-label="4.8 de 5 estrellas">
+              <div class="star-row" aria-hidden="true"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span></div>
+              <span class="star-count">4.8 (234)</span>
+            </div>
+            <a href="https://www.amazon.com" <!-- reemplazar link --> target="_blank" rel="noopener noreferrer sponsored" class="btn-amazon">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192L7.678 16.468l-.405 4.728c.59 0 .852-.255 1.18-.57l2.83-2.734 5.885 4.343c1.084.594 1.866.29 2.133-1.005l3.862-18.171c.392-1.578-.561-2.295-1.498-1.342z"/></svg>
+              Ver en Amazon
+            </a>
+          </div>
+        </article>
+
+        <article class="prod-card fade-in">
+          <div class="prod-img prod-img-dark">
+            <span class="prod-img-placeholder" aria-hidden="true">🕯️</span>
+            <span class="prod-badge">Más valorado</span>
+          </div>
+          <div class="prod-body">
+            <span class="prod-cat">Hogar</span>
+            <h4>Difusor de Aromas Negro Mármol</h4>
+            <p>Resina con veta de mármol negro. Silencioso, con temporizador integrado.</p>
+            <div class="stars" aria-label="4.7 de 5 estrellas">
+              <div class="star-row" aria-hidden="true"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span></div>
+              <span class="star-count">4.7 (178)</span>
+            </div>
+            <a href="https://www.amazon.com" <!-- reemplazar link --> target="_blank" rel="noopener noreferrer sponsored" class="btn-amazon">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192L7.678 16.468l-.405 4.728c.59 0 .852-.255 1.18-.57l2.83-2.734 5.885 4.343c1.084.594 1.866.29 2.133-1.005l3.862-18.171c.392-1.578-.561-2.295-1.498-1.342z"/></svg>
+              Ver en Amazon
+            </a>
+          </div>
+        </article>
+
+        <article class="prod-card fade-in">
+          <div class="prod-img prod-img-dark">
+            <span class="prod-img-placeholder" aria-hidden="true">🪴</span>
+          </div>
+          <div class="prod-body">
+            <span class="prod-cat">Hogar</span>
+            <h4>Maceta Minimalista Negro Mate</h4>
+            <p>Cerámica de alta temperatura. Diseño geométrico para espacios modernos.</p>
+            <div class="stars" aria-label="4.6 de 5 estrellas">
+              <div class="star-row" aria-hidden="true"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star empty"></span></div>
+              <span class="star-count">4.6 (92)</span>
+            </div>
+            <a href="https://www.amazon.com" <!-- reemplazar link --> target="_blank" rel="noopener noreferrer sponsored" class="btn-amazon">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192L7.678 16.468l-.405 4.728c.59 0 .852-.255 1.18-.57l2.83-2.734 5.885 4.343c1.084.594 1.866.29 2.133-1.005l3.862-18.171c.392-1.578-.561-2.295-1.498-1.342z"/></svg>
+              Ver en Amazon
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+    <!-- 04: Regalos y Accesorios -->
+    <div class="cat-block">
+      <div class="cat-block-header">
+        <div class="cat-block-title">
+          <span class="cat-block-num">04</span>
+          <h3>Regalos &amp; Accesorios</h3>
+        </div>
+        <a href="#" class="see-all">Ver top completo →</a>
+      </div>
+      <div class="prod-grid-4">
+
+        <article class="prod-card fade-in">
+          <div class="prod-img prod-img-soft">
+            <span class="prod-img-placeholder" aria-hidden="true">⌚</span>
+            <span class="prod-badge">Top regalo</span>
+          </div>
+          <div class="prod-body">
+            <span class="prod-cat">Accesorios</span>
+            <h4>Reloj Minimalista Negro IP</h4>
+            <p>Acero con recubrimiento IP negro. Esfera limpia sin marcadores. Discreción total.</p>
+            <div class="stars" aria-label="4.8 de 5 estrellas">
+              <div class="star-row" aria-hidden="true"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span></div>
+              <span class="star-count">4.8 (201)</span>
+            </div>
+            <a href="https://www.amazon.com" <!-- reemplazar link --> target="_blank" rel="noopener noreferrer sponsored" class="btn-amazon">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192L7.678 16.468l-.405 4.728c.59 0 .852-.255 1.18-.57l2.83-2.734 5.885 4.343c1.084.594 1.866.29 2.133-1.005l3.862-18.171c.392-1.578-.561-2.295-1.498-1.342z"/></svg>
+              Ver en Amazon
+            </a>
+          </div>
+        </article>
+
+        <article class="prod-card fade-in">
+          <div class="prod-img prod-img-soft">
+            <span class="prod-img-placeholder" aria-hidden="true">🖊️</span>
+            <span class="prod-badge">Más valorado</span>
+          </div>
+          <div class="prod-body">
+            <span class="prod-cat">Regalos</span>
+            <h4>Set de Escritura Negro Mate</h4>
+            <p>Bolígrafo y portaminas en aluminio anodizado. El regalo que dice todo.</p>
+            <div class="stars" aria-label="4.7 de 5 estrellas">
+              <div class="star-row" aria-hidden="true"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span></div>
+              <span class="star-count">4.7 (134)</span>
+            </div>
+            <a href="https://www.amazon.com" <!-- reemplazar link --> target="_blank" rel="noopener noreferrer sponsored" class="btn-amazon">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192L7.678 16.468l-.405 4.728c.59 0 .852-.255 1.18-.57l2.83-2.734 5.885 4.343c1.084.594 1.866.29 2.133-1.005l3.862-18.171c.392-1.578-.561-2.295-1.498-1.342z"/></svg>
+              Ver en Amazon
+            </a>
+          </div>
+        </article>
+
+        <article class="prod-card fade-in">
+          <div class="prod-img prod-img-soft">
+            <span class="prod-img-placeholder" aria-hidden="true">👜</span>
+          </div>
+          <div class="prod-body">
+            <span class="prod-cat">Accesorios</span>
+            <h4>Cartera Slim en Cuero Negro</h4>
+            <p>Cuero vegetal negro, costura invisible. Capacidad para 8 tarjetas y billetes.</p>
+            <div class="stars" aria-label="4.6 de 5 estrellas">
+              <div class="star-row" aria-hidden="true"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star empty"></span></div>
+              <span class="star-count">4.6 (267)</span>
+            </div>
+            <a href="https://www.amazon.com" <!-- reemplazar link --> target="_blank" rel="noopener noreferrer sponsored" class="btn-amazon">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192L7.678 16.468l-.405 4.728c.59 0 .852-.255 1.18-.57l2.83-2.734 5.885 4.343c1.084.594 1.866.29 2.133-1.005l3.862-18.171c.392-1.578-.561-2.295-1.498-1.342z"/></svg>
+              Ver en Amazon
+            </a>
+          </div>
+        </article>
+
+        <article class="prod-card fade-in">
+          <div class="prod-img prod-img-soft">
+            <span class="prod-img-placeholder" aria-hidden="true">🕶️</span>
+            <span class="prod-badge">Top editorial</span>
+          </div>
+          <div class="prod-body">
+            <span class="prod-cat">Accesorios</span>
+            <h4>Gafas de Sol Montura Negra</h4>
+            <p>Acetato negro con lentes polarizadas. Protección UV400. Clásico intemporal.</p>
+            <div class="stars" aria-label="4.8 de 5 estrellas">
+              <div class="star-row" aria-hidden="true"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span></div>
+              <span class="star-count">4.8 (88)</span>
+            </div>
+            <a href="https://www.amazon.com" <!-- reemplazar link --> target="_blank" rel="noopener noreferrer sponsored" class="btn-amazon">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192L7.678 16.468l-.405 4.728c.59 0 .852-.255 1.18-.57l2.83-2.734 5.885 4.343c1.084.594 1.866.29 2.133-1.005l3.862-18.171c.392-1.578-.561-2.295-1.498-1.342z"/></svg>
+              Ver en Amazon
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- TOPS -->
+<section class="tops" id="tops" aria-labelledby="tops-title">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <span class="section-label">Selección curada</span>
+        <h2 id="tops-title">Los mejores tops en negro</h2>
+      </div>
+      <a href="#" class="see-all">Ver todos →</a>
+    </div>
+
+    <div class="tops-grid">
+
+      <a href="#" class="top-card fade-in">
+        <div class="top-number">01</div>
+        <span class="top-label">Escritorio Minimalista</span>
+        <h3>Top 10 gadgets negros para escritorio minimalista</h3>
+        <p>Los accesorios que transforman tu mesa de trabajo en un espacio de diseño puro.</p>
+        <div class="top-arrow" aria-hidden="true">↗</div>
+      </a>
+
+      <a href="#" class="top-card fade-in">
+        <div class="top-number">02</div>
+        <span class="top-label">Home Office</span>
+        <h3>Top 10 accesorios negros para home office</h3>
+        <p>Equipa tu oficina en casa con piezas que inspiran concentración y estilo.</p>
+        <div class="top-arrow" aria-hidden="true">↗</div>
+      </a>
+
+      <a href="#" class="top-card fade-in">
+        <div class="top-number">03</div>
+        <span class="top-label">Regalos Premium</span>
+        <h3>Top 10 regalos negros de elegancia garantizada</h3>
+        <p>Cuando el packaging negro ya dice todo antes de abrir la caja.</p>
+        <div class="top-arrow" aria-hidden="true">↗</div>
+      </a>
+
+      <a href="#" class="top-card fade-in">
+        <div class="top-number">04</div>
+        <span class="top-label">Cocina Moderna</span>
+        <h3>Top 10 productos negros para cocina contemporánea</h3>
+        <p>Cocina como diseñas: con materiales nobles y estética sin concesiones.</p>
+        <div class="top-arrow" aria-hidden="true">↗</div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- SELECCIÓN DEL EDITOR -->
+<section class="editor-picks" id="editor" aria-labelledby="editor-title">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <span class="section-label">Selección del editor</span>
+        <h2 id="editor-title">Piezas que no necesitan color</h2>
+      </div>
+      <a href="#" class="see-all">Ver todos →</a>
+    </div>
+
+    <div class="editor-grid">
+
+      <article class="prod-card fade-in">
+        <div class="prod-img prod-img-mid">
+          <span class="prod-img-placeholder" aria-hidden="true">🖥️</span>
+          <span class="prod-badge">Más valorado</span>
+        </div>
+        <div class="prod-body">
+          <span class="prod-cat">Tecnología</span>
+          <h4>Monitor Negro Ultra-Slim 27"</h4>
+          <p>Pantalla IPS sin marcos con soporte ergonómico incluido. Diseño invisible, rendimiento superior.</p>
+          <div class="stars" aria-label="4.8 de 5 estrellas">
+            <div class="star-row" aria-hidden="true"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span></div>
+            <span class="star-count">4.8 (324 reseñas)</span>
+          </div>
+          <a href="https://www.amazon.com" <!-- reemplazar link --> target="_blank" rel="noopener noreferrer sponsored" class="btn-amazon">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192L7.678 16.468l-.405 4.728c.59 0 .852-.255 1.18-.57l2.83-2.734 5.885 4.343c1.084.594 1.866.29 2.133-1.005l3.862-18.171c.392-1.578-.561-2.295-1.498-1.342z"/></svg>
+            Ver en Amazon
+          </a>
+        </div>
+      </article>
+
+      <article class="prod-card fade-in">
+        <div class="prod-img prod-img-dark">
+          <span class="prod-img-placeholder" aria-hidden="true">⌨️</span>
+          <span class="prod-badge">Top editorial</span>
+        </div>
+        <div class="prod-body">
+          <span class="prod-cat">Escritorio</span>
+          <h4>Teclado Mecánico Negro Silencioso</h4>
+          <p>Switches táctiles silenciosos y construcción en aluminio anodizado negro mate.</p>
+          <div class="stars" aria-label="4.6 de 5 estrellas">
+            <div class="star-row" aria-hidden="true"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star empty"></span></div>
+            <span class="star-count">4.6 (188 reseñas)</span>
+          </div>
+          <a href="https://www.amazon.com" <!-- reemplazar link --> target="_blank" rel="noopener noreferrer sponsored" class="btn-amazon">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192L7.678 16.468l-.405 4.728c.59 0 .852-.255 1.18-.57l2.83-2.734 5.885 4.343c1.084.594 1.866.29 2.133-1.005l3.862-18.171c.392-1.578-.561-2.295-1.498-1.342z"/></svg>
+            Ver en Amazon
+          </a>
+        </div>
+      </article>
+
+      <article class="prod-card fade-in">
+        <div class="prod-img prod-img-dark">
+          <span class="prod-img-placeholder" aria-hidden="true">☕</span>
+          <span class="prod-badge">Edición limitada</span>
+        </div>
+        <div class="prod-body">
+          <span class="prod-cat">Hogar y Cocina</span>
+          <h4>Cafetera Espresso Negra Mate</h4>
+          <p>Acabado cerámico negro absorbente de luz. El ritual del café como objeto de colección.</p>
+          <div class="stars" aria-label="4.9 de 5 estrellas">
+            <div class="star-row" aria-hidden="true"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span></div>
+            <span class="star-count">4.9 (97 reseñas)</span>
+          </div>
+          <a href="https://www.amazon.com" <!-- reemplazar link --> target="_blank" rel="noopener noreferrer sponsored" class="btn-amazon">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192L7.678 16.468l-.405 4.728c.59 0 .852-.255 1.18-.57l2.83-2.734 5.885 4.343c1.084.594 1.866.29 2.133-1.005l3.862-18.171c.392-1.578-.561-2.295-1.498-1.342z"/></svg>
+            Ver en Amazon
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- MANIFESTO FINAL -->
+<section class="manifesto" aria-label="Filosofía de ColorTop">
+  <div class="container">
+    <div class="divider"></div>
+    <p>
+      El negro no es un color. Es una declaración.
+      En ColorTop creemos que los mejores objetos no piden atención — simplemente la merecen.
+      Por eso comenzamos aquí: curando los productos más elegantes, funcionales y bien diseñados
+      para quienes entienden que <em>la estética es también una forma de vida.</em>
+    </p>
+    <div class="divider"></div>
+  </div>
+</section>
+
+<!-- AVISO AFILIADOS -->
+<div class="affiliate-notice" role="complementary" aria-label="Aviso de afiliado">
+  <div class="affiliate-inner">
+    <div class="affiliate-icon" aria-hidden="true">i</div>
+    <p>
+      <strong>Aviso de transparencia:</strong> ColorTop participa en el Programa de Asociados de Amazon Services LLC,
+      un programa de publicidad por afiliación diseñado para proporcionar un medio para ganar honorarios al vincular a Amazon.es y sitios afiliados.
+      Esto no tiene ningún coste adicional para ti y nos permite seguir ofreciendo contenido curado de calidad.
+    </p>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <a href="#" class="logo" aria-label="ColorTop">
+    <div class="logo-mark"><span></span></div>
+    <span class="logo-text">ColorTop</span>
+  </a>
+</footer>
+
+<script>
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 60);
+  }, { passive: true });
+
+  function toggleMenu() {
+    document.getElementById('nav').classList.toggle('open');
+  }
+
+  document.querySelectorAll('#nav a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('nav').classList.remove('open');
+    });
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -50px 0px' });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
